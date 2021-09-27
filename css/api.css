@@ -16,6 +16,7 @@ main h2 {
     color: #fff;
 }
 
+/* TAREFA */
 .todo-div{
     border: 1px solid #000;
     border-radius: 1rem;
@@ -87,6 +88,10 @@ main h2 {
     content: 'Todas as tarefas estão completas! :)';
     font-size: 1rem;
     color: #ddd;
+}
+
+.todo-list #completed h5 {
+    text-decoration: line-through #f55;
 }
 
 .todo-list #completed:empty::after {

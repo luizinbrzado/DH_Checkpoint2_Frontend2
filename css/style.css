@@ -11,6 +11,7 @@ body {
     background-color: #5865f2;
 }
 
+/* FORMULÁRIO DE CRIAÇÃO DE TAREFAS */
 .criar-tarefa {
     position: relative;
     display: flex;
@@ -220,7 +221,9 @@ body {
     color: #5f5;
 }
 
-
+.todo-list #completed h3 {
+    text-decoration: line-through #f55;
+}
 
 .todo-list > span {
     width: 1px;
@@ -228,11 +231,7 @@ body {
     background-color: #fff;
 }
 
-
-
-
-
-
+/* NOTIFICAÇÃO: ACEITAR NOTIFICAÇÕES */
 #aceitar-not {
     display: flex;
     gap: 5rem;
@@ -276,12 +275,7 @@ body {
     color: #000;
 }
 
-
-
-
-
-
-
+/* LEMBRETE: ACEITAR NOTIFICAÇÕES */
 #aviso-not {
     display: flex;
     gap: 5rem;

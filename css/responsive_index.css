@@ -1,0 +1,116 @@
+@media only screen and (max-width : 599px) {
+    header {
+        position: relative;
+    }
+
+    .criar-tarefa {
+        width: 80%; 
+    }
+
+    .criar-tarefa .datas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .todo-list {
+        flex-direction: column;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .todo-list > div {
+        overflow-y: hidden;
+    }
+
+    .todo-list .todo:not(:empty) {
+        display: flex;
+        flex-direction: column;
+        width: 230px;
+    }
+
+    .todo-list > span {
+        width: 40%;
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width : 600px) {
+    header {
+        position: relative;
+    }
+    .criar-tarefa {
+        width: 540px;
+    }
+
+    .todo-list {
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .todo-list #todo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .todo-list #completed {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .todo-list > div {
+        overflow-y: auto;
+        max-height: 62vh;
+    }
+
+    .todo-list > div:first-child {
+        width: 50%;
+    }
+    
+    .todo-list > div:last-child {
+        width: 50%;
+    }   
+
+     
+}
+
+@media only screen and (min-width : 900px) {
+    .criar-tarefa {
+        width: 600px;
+    }
+
+    .todo-list #todo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .todo-list > div:first-child {
+        width: 60%;
+    }
+    
+    .todo-list > div:last-child {
+        width: 40%;
+    }    
+}
+
+@media only screen and (min-width : 1200px) {
+    header {
+        position: fixed;
+    }
+
+    .todo-list {
+        width: 80%;
+    }
+
+    .todo-list #todo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .todo-list #completed {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* OPCIONAL para telas grandes E se tiver algo especial para eles*/
+@media only screen and (min-width : 1800px) {
+
+}

@@ -1,0 +1,124 @@
+/* #completed .todo-div{
+    background-color: #35f174;
+
+}
+
+#todo .todo-div {
+    background-color: #7fccff;
+} */
+
+main {
+    margin-top: 1rem;
+}
+
+main h2 {
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.todo-div{
+    border: 1px solid #000;
+    border-radius: 1rem;
+    padding: 0.5rem 0.8rem;
+    margin: 1rem 0;
+}
+
+.todo-div div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.todo-div span {
+    width: 1px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.todo-list {
+    position: relative;
+    display: flex;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 2rem;
+    color: #fff;
+}
+
+.todo-list > div {
+    overflow-y: auto;
+    max-height: 85vh;
+}
+
+.todo-list > div::-webkit-scrollbar {
+    width: 12px;
+}
+
+.todo-list > div::-webkit-scrollbar-track {
+    background: transparent ;
+}
+
+.todo-list > div::-webkit-scrollbar-thumb {
+    background-color: #2f3136;
+    border-radius: 6px;
+}
+
+.todo-list > div > h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.todo-list > div:first-child {
+    width: 60%;
+}
+
+.todo-list > div:last-child {
+    width: 40%;
+}
+
+.todo-list .todo:not(:empty) {
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.todo-list #todo:empty::after {
+    content: 'Todas as tarefas estão completas! :)';
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.todo-list #completed:empty::after {
+    content: 'Nenhuma tarefa completa! :(';
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.todo-list .todo > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+}
+
+.todo-list .todo > div:hover {
+    border: 1px solid #fff;
+}
+
+.todo-list .todo > div h3 {
+    margin-bottom: 1rem;
+}
+
+.todo-list .todo div div span  {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.todo-list > span {
+    width: 1px;
+    height: 85vh;
+    background-color: #fff;
+}

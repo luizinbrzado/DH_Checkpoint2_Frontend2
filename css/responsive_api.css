@@ -1,0 +1,109 @@
+@media only screen and (max-width : 599px) {
+    header {
+        position: relative;
+    }
+
+    .todo-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .todo-list > div {
+        position: relative;
+        max-height: none;
+        left: 50%;
+        transform: translateX(-100px);
+    }
+
+    .todo-list > div:first-child,
+    .todo-list > div:last-child {
+        position: relative;
+        width: 100%;
+    }
+
+    .todo-list .todo:not(:empty) {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .todo-list .todo .todo-div {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .todo-list > span {
+        width: 40%;
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width : 600px) {
+    header {
+        position: relative;
+    }
+
+    .todo-list {
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .todo-list #todo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .todo-list #completed {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .todo-list > div:first-child {
+        width: 50%;
+    }
+    
+    .todo-list > div:last-child {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width : 900px) {
+    .todo-list #todo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .todo-list #completed {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .todo-list > div:first-child {
+        width: 60%;
+    }
+    
+    .todo-list > div:last-child {
+        width: 40%;
+    }    
+}
+
+@media only screen and (min-width : 1200px) {
+
+    .todo-list {
+        width: 80%;
+    }
+
+    .todo-list #todo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .todo-list #completed {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* OPCIONAL para telas grandes E se tiver algo especial para eles*/
+@media only screen and (min-width : 1800px) {
+
+}

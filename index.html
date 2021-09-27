@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tirar depois-->
+    <script src="https://kit.fontawesome.com/256fb4a9c2.js" crossorigin="anonymous"></script>
+    <!--Tirar depois>-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Tirar depois>-->
+    <link rel="stylesheet" href="./css/header.css">
+
+    <link rel="stylesheet" href="./css/responsive_index.css">
+    <!--Tirar depois>-->
+    <link rel="shortcut icon" href="./img/to_do.ico" type="image/x-icon">
+    <!--Tirar depois>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Tirar depois-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Tirar depois-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--Tirar depois-->
+    <title>Home - To Do - List</title>
+</head>
+
+<!--Tirar depois a classe loaded-->
+
+<body>
+    <header></header>
+
+    <main>
+        <div class="criar-tarefa">
+            <div>
+                <div>
+                    <label for="tarefa">Tarefa:</label>
+                    <span id="counter-tarefa">80</span>
+                </div>
+                <input type="text" name="tarefa" id="tarefa" maxlength="80">
+            </div>
+            <!--Tirar depois a classe datas>-->
+            <div class="datas">
+                <div>
+                    <label for="data-criacao">Data de criação:</label>
+                    <!--Tirar depois o datetime-local para date apenas-->
+                    <input type="datetime-local" name="data-criacao" id="data-criacao" disabled>
+                </div>
+                <div>
+                    <label for="data-final">Data final:</label>
+                    <input type="datetime-local" name="data-final" id="data-final">
+                </div>
+            </div>
+            <button id="btn-add"><i class="fas fa-plus fa-sm"></i></button>
+        </div>
+
+        <div class="todo-list">
+            <!--Tirar depois>-->
+            <div>
+                <h2>A fazer</h2>
+                <div class="todo" id="todo"></div>
+                <!--Tirar depois>-->
+            </div>
+            <span></span>
+            <!--Tirar depois>-->
+            <div>
+                <h2>Feito</h2>
+                <div class="todo" id="completed"></div>
+                <!--Tirar depois>-->
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/index.js"></script>
+
+    <script src="./js/title.js"></script>
+
+    <script src="./js/header.js"></script>
+
+</body>
+
+</html>

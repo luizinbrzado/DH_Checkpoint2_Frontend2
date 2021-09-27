@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav img {
+    width: 3.5rem;
+    height: auto;
+    cursor: pointer;
+}
+
+header nav img:hover {
+    box-shadow: 1px 1px 4px #ffbc40;
+}
+
+header nav div button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+header nav div button:last-child {
+    margin-left: 1rem;
+}
+
+.button-hover-default:hover {
+    background-color: rgba(54, 57, 63, 0.8);
+}
+
+.button-hover-dark:hover {
+    background-color: rgb(88, 101, 242, 0.8);
+}

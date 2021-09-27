@@ -144,8 +144,8 @@ function completarTarefa() {
     let id = parent.id;
 
     let tarefaTxt = item.firstChild.textContent;
-    let dataCriacaoTxt = item.children[1].children[0].textContent;
-    let dataFinalTxt = item.children[1].children[1].textContent;
+    let dataCriacaoTxt = item.children[1].children[0].children[0].textContent;
+    let dataFinalTxt = item.children[1].children[2].children[0].textContent;
 
     let value = {
         tarefa: tarefaTxt,
@@ -181,9 +181,9 @@ function addTarefaNoDOM(tarefaValue, dataCriacaoValue, dataFinalValue, isComplet
     item.innerHTML =
         `<h3>${tarefaValue}</h3>
         <div class="datas-tarefa">
-        <p>Criado em: ${dataCriacaoValue}</p>
+        <p>Criado em: <span>${dataCriacaoValue}</span></p>
         <hr>
-        <p>Data final: ${dataFinalValue}</p>
+        <p>Data final: <span>${dataFinalValue}</span></p>
         </div>
         `;
 

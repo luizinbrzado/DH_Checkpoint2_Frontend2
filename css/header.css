@@ -26,10 +26,6 @@ header nav img {
     cursor: pointer;
 }
 
-header nav img:hover {
-    box-shadow: 1px 1px 4px #ffbc40;
-}
-
 header nav div button {
     font-size: 1rem;
     padding: 0.5rem 1rem;

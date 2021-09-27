@@ -13,7 +13,7 @@ function headerNoDOM() {
     let imageHome = document.createElement('img');
     imageHome.src = './img/to_do.png';
     imageHome.addEventListener('click', () => {
-        window.location.pathname = '/';
+        window.location.pathname = '/DH_Checkpoint2_Frontend2';
         temaSite();
     })
 
@@ -91,7 +91,7 @@ function headerNoDOM() {
     let buttonSiteAPI = document.createElement('button');
     buttonSiteAPI.textContent = 'API Site'
     buttonSiteAPI.addEventListener('click', () => {
-        window.location.pathname = '/api.html'
+        window.location.pathname = '/DH_Checkpoint2_Frontend2/api.html'
     })
 
     if (header.innerHTML === '') {

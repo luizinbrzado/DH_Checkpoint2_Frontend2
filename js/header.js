@@ -39,7 +39,7 @@ function headerNoDOM() {
                 element.style.color = '#fff'
             });
 
-            if (window.location.pathname.includes('index') || window.location.pathname == ('/DH_Checkpoint2_Frontend2')) {
+            if (window.location.pathname.includes('index') || window.location.pathname == ('/DH_Checkpoint2_Frontend2/')) {
                 document.querySelector('.criar-tarefa').style.backgroundColor = '#36393f';
 
                 document.querySelector('.criar-tarefa').querySelectorAll('input').forEach(element => {

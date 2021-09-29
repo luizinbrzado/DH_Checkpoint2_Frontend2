@@ -243,6 +243,7 @@ body {
     bottom: 1rem;
     font-size: 0.8rem;
     animation: animate_notificacao_in 6s;
+    z-index: 1;
 }
 
 #aceitar-not h3 {
@@ -287,6 +288,7 @@ body {
     bottom: 1rem;
     font-size: 0.8rem;
     animation: animate_notificacao_in 6s;
+    z-index: 1;
 }
 
 #aviso-not i{

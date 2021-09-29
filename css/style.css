@@ -56,6 +56,10 @@ body {
     transition: border 0.2s ease-in-out;
 }
 
+.criar-tarefa input:disabled {
+    background-color: #c6c8c9;
+}
+
 .criar-tarefa #tarefa::placeholder,
 .criar-tarefa #data-final::placeholder {
     color: #f55;

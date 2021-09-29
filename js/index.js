@@ -4,6 +4,7 @@ let tarefaInput = document.getElementById('tarefa');
 const maxTarefaLenght = tarefaInput.getAttribute('maxlength');
 let dataCriacaoInput = document.getElementById('data-criacao');
 let dataFinalInput = document.getElementById('data-final');
+let pesquisaInput = document.getElementById('search');
 
 function reloadTemaJSON() {
     tema = (localStorage.getItem('tema')) ?
@@ -16,7 +17,7 @@ let dados = (localStorage.getItem('todoList')) ?
         completed: []
     };
 
-let timing = setInterval(() => {    
+let timing = setInterval(() => {
     let now = new Date();
     now.setMinutes(now.getMinutes() - now.getTimezoneOffset())
     dataCriacaoInput.value = now.toISOString().slice(0, -8);
@@ -36,9 +37,9 @@ tarefaInput.addEventListener("input", function (e) {
 });
 
 btnAdd.addEventListener('click', () => {
-    
 
-    if(tarefaInput.value.replace(/\s/g, '') === '') {
+
+    if (tarefaInput.value.replace(/\s/g, '') === '') {
         tarefaInput.placeholder = 'Campo obrigatório';
         tarefaInput.style.border = '1px solid #f55';
         tarefaInput.value = '';
@@ -50,7 +51,7 @@ btnAdd.addEventListener('click', () => {
         tarefaInput.style.border = '';
     }
 
-    if(dataFinalInput.value.trim().replace(/\s/g, '') === '') {
+    if (dataFinalInput.value.trim().replace(/\s/g, '') === '') {
         dataFinalInput.type = 'text';
         dataFinalInput.style.border = '1px solid #f55';
         dataFinalInput.placeholder = 'Campo obrigatório';
@@ -66,8 +67,8 @@ btnAdd.addEventListener('click', () => {
     if (dataFinalInput.value < dataCriacaoInput.value) return;
 
     else if (tarefaInput.value.trim().replace(/\s/g, '') !== ''
-    && dataCriacaoInput.value.trim().replace(/\s/g, '') !== ''
-    && dataFinalInput.value.trim().replace(/\s/g, '') !== '') {
+        && dataCriacaoInput.value.trim().replace(/\s/g, '') !== ''
+        && dataFinalInput.value.trim().replace(/\s/g, '') !== '') {
         addTarefa(tarefaInput.value.trim(), dataCriacaoInput.value.replace('T', ' ').replace(/-/g, '/'), dataFinalInput.value.replace('T', ' ').replace(/-/g, '/'))
     }
     if (tema === 0) {
@@ -230,3 +231,18 @@ function carregarToDoNoDOM() {
         addTarefaNoDOM(valueCompleted.tarefa, valueCompleted.dataCriacao, valueCompleted.dataFinal, true);
     }
 }
+
+pesquisaInput.addEventListener('input', (e) => {
+    let filtro = pesquisaInput.value.toLowerCase();
+    let menu = document.querySelector('.todo-list');
+    let menuItens = menu.querySelectorAll('.todo-div');
+
+    for (let i = 0; i < menuItens.length; i++) {
+        let links = menuItens[i].getElementsByTagName('h3')[0];
+        if (links.innerHTML.toLowerCase().indexOf(filtro) > -1) {
+            menuItens[i].style.display = "";
+        } else {
+            menuItens[i].style.display = "none";
+        }
+    }
+})

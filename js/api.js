@@ -1,5 +1,7 @@
 const completed = document.getElementById('completed');
 const todo = document.getElementById('todo');
+let pesquisaInput = document.getElementById('search');
+
 const mostrarDados = (result) => {
     for (const campo in result) {
 
@@ -54,3 +56,18 @@ function carregarApi() {
         })
         .catch(e => console.error('Deu erro mano! ' + e, message))
 }
+
+pesquisaInput.addEventListener('input', (e) => {
+    let filtro = pesquisaInput.value.toLowerCase();
+    let menu = document.querySelector('.todo-list');
+    let menuItens = menu.querySelectorAll('.todo-div');
+
+    for (let i = 0; i < menuItens.length; i++) {
+        let links = menuItens[i].getElementsByTagName('h5')[0];
+        if (links.innerHTML.toLowerCase().indexOf(filtro) > -1) {
+            menuItens[i].style.display = "";
+        } else {
+            menuItens[i].style.display = "none";
+        }
+    }
+})

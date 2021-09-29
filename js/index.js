@@ -37,8 +37,6 @@ tarefaInput.addEventListener("input", function (e) {
 });
 
 btnAdd.addEventListener('click', () => {
-
-
     if (tarefaInput.value.replace(/\s/g, '') === '') {
         tarefaInput.placeholder = 'Campo obrigatório';
         tarefaInput.style.border = '1px solid #f55';

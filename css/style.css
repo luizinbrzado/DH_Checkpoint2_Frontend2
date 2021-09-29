@@ -134,14 +134,10 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background-color: #202225;
+    background-color: #2f3136;
     justify-content: center;
     align-items: center;
     transition: visibility 0.4s;
-}
-
-.search-box:hover .search-btn {
-    display: none;
 }
 
 .search-btn > i {

@@ -20,6 +20,14 @@ header nav {
     align-items: center;
 }
 
+header nav button {
+    background-color: transparent;
+}
+
+header nav button:focus:focus-visible {
+    outline: 1px solid white;
+}
+
 header nav img {
     width: 3.5rem;
     height: auto;
@@ -29,7 +37,6 @@ header nav img {
 header nav div button {
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    background-color: transparent;
     cursor: pointer;
 }
 

@@ -10,9 +10,10 @@ function headerNoDOM() {
     reloadTemaJSON();
     let nav = document.createElement('nav');
 
+    let buttonHome = document.createElement('button');
     let imageHome = document.createElement('img');
     imageHome.src = './img/to_do.png';
-    imageHome.addEventListener('click', () => {
+    buttonHome.addEventListener('click', () => {
         window.location.pathname = '/DH_Checkpoint2_Frontend2/index.html';
         temaSite();
     })
@@ -59,7 +60,7 @@ function headerNoDOM() {
                 element.style.backgroundColor = '#2f3136'
                 element.style.color = '#fff'
             });
-            
+
             document.querySelector('header').querySelectorAll('button').forEach((element) => {
                 element.style.color = '#fff';
             })
@@ -94,11 +95,10 @@ function headerNoDOM() {
         window.location.pathname = '/DH_Checkpoint2_Frontend2/api.html'
     })
 
-    if (header.innerHTML === '') {
-        divButtons.append(buttonSiteAPI, buttonTema);
-        nav.append(imageHome, divButtons);
-        header.appendChild(nav);
-    }
+    buttonHome.appendChild(imageHome);
+    divButtons.append(buttonSiteAPI, buttonTema);
+    nav.append(buttonHome, divButtons);
+    header.appendChild(nav);
 
     temaSite();
 }
